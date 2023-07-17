@@ -1,0 +1,27 @@
+<% if user_signed_in? %>
+  <li>
+    <%= link_to "Home" %>
+  </li>
+  <li>
+    <%= link_to "About" %>
+  </li>
+  <li>
+    <%= link_to "Sign up" %>
+  </li>
+  <li>
+    <%= link_to "Log in" %>
+  </li>
+<% else %>
+  <li>
+    <%= link_to "Home" %>
+  </li>
+  <li>
+    <%= link_to "Users" %>
+  </li>
+  <li>
+    <%= link_to "Books" %>
+  </li>
+  <li>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+  </li>
+<% end %>
